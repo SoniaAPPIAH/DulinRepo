@@ -1,0 +1,540 @@
+@font-face {
+    font-family: 'JosefinSans-Regular';
+    src: url(../font/JosefinSans-VariableFont_wght.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    font-size: 1rem;
+    font-family: 'JosefinSans-Regular';
+    font-weight: 300;
+}
+
+h1 {
+    margin: 3rem 0 3rem 0;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: gray;
+    font-weight: 500;
+    margin: 2rem 0 1rem 0 ;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.background {
+    width: auto;
+    height: 100%;
+    position: relative;
+    z-index: -2;
+}
+
+.dulinImage {
+    display: block;
+    height: 100%;
+    margin: auto;
+}
+
+.closeButton {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 3%;
+    width: 3%;
+}
+
+ul {
+    list-style: none;
+}
+
+.legends {
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+    margin-top: 0.8rem;
+}
+
+/*  ---------------------------------- NAVBAR -> Introduction  ---------------------------------- */ 
+.introduction {
+    position: absolute;
+    z-index: 4;
+    top: 40%;
+    left: 1%;
+    color: white;
+    font-size: 1.5rem;
+    border-bottom: 3px solid white;
+    margin: 3rem 0;
+}
+
+.introduction p {
+    margin: 1rem 0 ;
+}
+
+/* ---------------------------------- NAVBAR -> En savoir + ---------------------------------- */ 
+.readMore {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 1%;
+    color: white;
+    font-size: 1.5rem;
+    border-bottom: 3px solid white;
+    margin: 3rem 0;
+}
+
+.readMore p {
+    margin: 0.5rem 0 ;
+}
+
+/*  ---------------------------------- NAVBAR -> Menu des langues  ---------------------------------- */ 
+.menuLanguage {
+    position: fixed;
+    top: 63%;
+    left: 0;
+    width: 10%;
+    z-index: 5;
+    background-color: rgb(229,229,229,0.8);
+    color: black;
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.menuLanguage div {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.menuLanguage span {
+    color: rgb(0, 167, 167);
+    font-weight: 600;
+    padding-left: 0.5rem;
+}
+
+/*  ---------------------------------- NAVBAR -> Bouton copyright  ---------------------------------- */ 
+
+.copyrightButton {
+    position: absolute;
+    z-index: 4;
+    bottom: 2%;
+    left: 2%;
+    color: white;
+    font-size: 2.8rem;
+}
+
+/*  ---------------------------------- POINT OF INTEREST  -> Spots ---------------------------------- */ 
+.circle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(245, 237, 130, 1);
+    animation: pulse 2s infinite;
+    z-index: 3; 
+}
+
+.maisonMilitaire {
+    left: 15%;
+    top: 38%;
+}
+
+.defunts {
+    left: 25%;
+    top: 70%;
+}
+
+.roiSoleil {
+    left: 39%;
+    top: 45%;
+}
+
+.ange{
+    left: 45%;
+    top: 18%;
+}
+
+.deesseMinerve{
+    left: 56%;
+    top: 48%;
+}
+
+.planInvalides {
+    left: 56%;
+    top: 67%;
+}
+
+.dome {
+    left: 59%;
+    top: 25%;
+}
+
+.chantierInvalides {
+    left: 75%;
+    top: 25%;
+}
+
+.outilsArchitecte1 {
+    left: 68%;
+    top: 48%;
+}
+
+.outilsArchitecte2 {
+    left: 63%;
+    top: 93%;
+}
+
+.victoire {
+    left: 75%;
+    top: 62%;
+}
+
+.pensionnaires {
+    left: 82%;
+    top: 60%;
+}
+
+/*  ---------------------------------- POINT OF INTEREST  -> Textes ---------------------------------- */ 
+.openPOI {
+    display: none; 
+}
+
+.POI {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.imagePOI {
+    margin: auto;
+    border-radius: 20px;
+    animation: scale-in-imagePOI 2s;
+    box-shadow: rgba(0, 0, 0, 0.9) 12px 12px 20px 7px;
+    /*filter: drop-shadow(rgba(255, 242, 212, 0.8) 0px -15mm 7mm);*/
+}
+
+@keyframes scale-in-imagePOI {
+    0% {     
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {     
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {     
+        opacity: 1;
+        transform: scale(1);
+    }
+} 
+
+.layoutPOI {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: white;
+    overflow: hidden;
+    width: 45%;
+    height: 100vh;
+    padding: 0 2%;
+}
+
+.sublayoutPOI {
+    display: flex;
+}
+
+.imagesPOI7 {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 5rem;
+}
+
+.imagePOI7 {
+    height: 25rem;
+}
+
+.closeButtonPOI {
+    width: 6%;
+    padding-right: 5%;
+}
+
+.spanPOI2 {
+    color: gray;
+}
+
+/*  ---------------------------------- PAGE INTRODUCTION  ---------------------------------- */  
+
+.introductionPage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    z-index: 4;
+    padding: 15% 25%;
+    box-sizing: border-box;
+}
+
+/*  ---------------------------------- PAGE READ MORE ---------------------------------- */ 
+
+.readMorePage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    z-index: 4;
+    padding: 2% 2%;
+    box-sizing: border-box;
+}
+
+.layoutReadMore {
+    height: 100%;
+}
+
+.openNavbarCat {
+    display: none;
+}
+
+.navbarReadMore {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translate(-50%, 0);
+    width: 90%;
+    margin: auto;
+}
+
+.navbarCat h2 {
+    margin-bottom: 0;
+}
+
+.navbarCat:after {
+    border-bottom: 2px solid gray;
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 0.5rem;
+}
+
+.layoutCategories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    bottom: 13%;
+    transform: translate(-50%, 0);
+    width: 30%;
+    margin: auto;
+}
+
+.layoutCategories img {
+    width: 75px;
+    height: 75px;
+    margin: 0 1.5rem;
+}
+
+.openSubCategorie {
+    display: none;
+    width: 75%;
+    height: 75vh;
+    margin: 0 auto 2rem auto;
+}
+
+.subCatActive:after {
+    border-bottom: 4px solid rgb(0, 198, 212);
+    content: "";
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-top: 0.5rem;
+}
+
+.mediasCont {
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+}
+
+.media{
+    display: inline;
+    max-width: 60%;
+}
+
+.mediaSize {
+    max-height: 50vh;
+    width: auto;
+    margin-top: 2rem;
+}
+
+.mediaSizeExcep {
+    max-height: 50vh;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.mediasContCat4-4{
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.mediaSizeCat4-41 {
+    max-height: 40vh;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.mediaSizeCat4-42 {
+    max-height: 45vh;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.mediaSizeCat4-43 {
+    max-height: 60vh;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.mediaSizeCat4-5 {
+    max-height: 28vh;
+    width: auto;
+    margin-top: 3rem;
+}
+
+.mediaSizeCat5-3 {
+    max-height: 25vh;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.mediaSizeCat5-3:first-child {
+    margin-top: 3rem;
+}
+
+/*  ---------------------------------- PAGE COPYRIGHT  ---------------------------------- */ 
+
+.copyrightPage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    z-index: 4;
+    padding: 8% 15%;
+    box-sizing: border-box;
+}
+
+.columns {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0 5%; 
+    grid-template-areas: 
+    "column1 column2"
+    "column3 column3"; 
+}
+
+.column1 { 
+    grid-area: column1;
+}
+
+.logoMA {
+    margin-top: 2rem;
+    width: 35%;
+}
+
+.column1 p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+.column2 { 
+    grid-area: column2; 
+    color: darkgoldenrod;
+    background-color: rgba(171, 171, 171, 0.127);
+    padding: 2rem;
+}
+
+.column2 p {
+    font-size: 1.2rem;
+}
+
+.fondationsLogos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.2rem;
+}
+
+.logoSauvegardeArt {
+    width: 35%;
+}
+
+.logoLazard {
+    width: 50%;
+}
+
+.fondationsText {
+    line-height: 1.6rem;
+}
+
+.column3 { 
+    grid-area: column3; 
+}
+
+.creditsPhoto {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px rgba(245, 237, 130, 0);
+    }
+    50% {
+        box-shadow: 0 0 20px rgb(245, 226, 130);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(245, 237, 130, 0);
+    }
+} 
