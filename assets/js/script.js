@@ -222,4 +222,62 @@ setActiveLink(1);
             setActiveSub(firstSubCat.id.slice(10));
         }
     }
+
+    // FONCTION ZOOM
+
+    const container = document.querySelector('.background');
+
+    let isZoomed = false;
+    let initialDistance = null;
+
+    // Fonction pour activer le zoom
+    function activateZoom() {
+        container.classList.add('zoomed');
+        container.classList.add('hide-spots');
+        isZoomed = true;
+    }
+
+    // Fonction pour désactiver le zoom
+    function deactivateZoom() {
+        container.classList.remove('zoomed');
+        container.classList.remove('hide-spots');
+        isZoomed = false;
+    }
+
+    // Gestionnaire d'événements pour les gestes tactiles
+    container.addEventListener('touchstart', function(event) {
+        if (event.touches.length === 2) {
+            initialDistance = getDistance(event.touches[0], event.touches[1]);
+        }
+    });
+
+    container.addEventListener('touchmove', function(event) {
+        if (event.touches.length === 2) {
+            const currentDistance = getDistance(event.touches[0], event.touches[1]);
+
+            if (initialDistance !== null) {
+                const distanceDelta = currentDistance - initialDistance;
+
+                if (distanceDelta > 50 && !isZoomed) {
+                    activateZoom();
+                } else if (distanceDelta < -50 && isZoomed) {
+                    deactivateZoom();
+                }
+            }
+        }
+    });
+
+    container.addEventListener('touchend', function(event) {
+        if (event.touches.length < 2) {
+            initialDistance = null;
+        }
+    });
+
+    // Fonction utilitaire pour calculer la distance entre deux points tactiles
+    function getDistance(touch1, touch2) {
+        const dx = touch2.clientX - touch1.clientX;
+        const dy = touch2.clientY - touch1.clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+    }
+
 });

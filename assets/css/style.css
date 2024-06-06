@@ -45,6 +45,14 @@ p {
     height: 100%;
     position: relative;
     z-index: -2;
+    background-size: cover;
+    transition: transform 0.5s ease;
+}
+
+.zoomed {
+    transform: scale(2); /* Change cette valeur pour ajuster le niveau de zoom */
+    transform-origin: center;
+    transition: transform 0.3s ease;
 }
 
 .dulinImage {
@@ -151,6 +159,11 @@ ul {
     box-shadow: 0 0 20px rgba(245, 237, 130, 1);
     animation: pulse 2s infinite;
     z-index: 3; 
+    transition: opacity 0.5s ease;
+}
+
+.hide-spots .cicle {
+    display: none;
 }
 
 .maisonMilitaire {
